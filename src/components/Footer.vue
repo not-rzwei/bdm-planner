@@ -13,5 +13,6 @@ footer {
   z-index: 2;
   text-align: center;
   color: #ccc;
+  padding-bottom: 2rem;
 }
 </style>

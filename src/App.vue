@@ -22,13 +22,8 @@ export default {
 </script>
 
 <style>
-html, body, #app {
-  height: 100%;
-}
-
-#app {
+body {
   background: url(~@/assets/ranger_bg.jpg) no-repeat;
   background-size: cover;
-  overflow: hidden;
 }
 </style>
