@@ -81,9 +81,14 @@ main {
   display: inline-block;
   width: 64px;
   height: 64px;
-  background: rgba(0, 0, 0, 0.3);
+  background: #ddd;
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: 2px solid #999;
+}
+
+.slot.used {
+  background-image: url(~@/assets/placeholders/armor.png);
+  background-position: center;
 }
 
 .slot.unused {
