@@ -1,7 +1,15 @@
 <template>
   <main>
     <b-container fluid="xl" class="class container">
-      <b-row class="equipment">
+      <b-row class="equipment position-relative">
+        <div class="class-image">
+          <img
+            src="@/assets/ranger_img.png"
+            class="mw-100 mh-100"
+            alt="Class Image"
+          />
+        </div>
+
         <b-col offset="4" cols="3" class="slots">
           <b-row v-for="n in 5" :key="n" align-h="end">
             <b-col cols="4">
@@ -25,8 +33,23 @@
           </b-card>
         </b-col>
       </b-row>
-      <b-row class="stats">
-        AP DP
+
+      <b-row class="stats bg-dark text-light " no-gutters align-v="center">
+        <b-col>
+          <img src="@/assets/ranger_icon.png" />
+        </b-col>
+        <b-col>
+          <small>Combat (CP)</small>
+          <p class="lead m-0">0</p>
+        </b-col>
+        <b-col>
+          <small>Attack (AP)</small>
+          <p class="lead m-0">0</p>
+        </b-col>
+        <b-col>
+          <small>Defense (DP)</small>
+          <p class="lead m-0">0</p>
+        </b-col>
       </b-row>
     </b-container>
   </main>
@@ -47,6 +70,14 @@ main {
   margin-bottom: 1rem;
 }
 
+.class-image {
+  position: absolute;
+  top: 0;
+  left: -200px;
+  /* max-width: 700px; */
+  z-index: 0;
+}
+
 .slot {
   display: inline-block;
   width: 64px;
@@ -59,5 +90,13 @@ main {
 .slot.unused {
   border-radius: 0;
   margin: 0 1rem 1rem 0;
+}
+
+.stats {
+  margin-top: 4rem;
+  background: red;
+  position: relative;
+  z-index: 2;
+  height: 100px;
 }
 </style>

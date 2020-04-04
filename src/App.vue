@@ -24,6 +24,7 @@ html, body, #app {
 }
 
 #app {
-  background: url(~@/assets/ranger_bg.jpg);
+  background: url(~@/assets/ranger_bg.jpg) no-repeat;
+  background-size: cover;
 }
 </style>
