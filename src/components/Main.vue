@@ -21,7 +21,7 @@
           <EquipmentSlot type="necklace" />
           <EquipmentSlot type="belt" />
           <EquipmentSlot type="earring" />
-          <EquipmentSlot type="invisible"/>
+          <EquipmentSlot type="invisible" />
           <EquipmentSlot type="bracelet" />
           <EquipmentSlot type="relic" />
           <EquipmentSlot type="alchemy" />
@@ -70,7 +70,7 @@ export default {
   components: {
     EquipmentSlot,
     Equipment
-  },
+  }
 };
 </script>
 

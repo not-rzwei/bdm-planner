@@ -1,14 +1,14 @@
 <template>
-    <div class="slot" :class="type"></div>
+  <div class="slot" :class="type"></div>
 </template>
 
 <script>
 export default {
-    name: "EquipmentSlot",
-    props: {
-        type: String
-    }
-}
+  name: "EquipmentSlot",
+  props: {
+    type: String
+  }
+};
 </script>
 
 <style scoped>

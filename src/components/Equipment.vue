@@ -1,14 +1,14 @@
 <template>
-    <div class="equipment" :class="type"></div>
+  <div class="equipment" :class="type"></div>
 </template>
 
 <script>
 export default {
-    name: "Equipment",
-    props: {
-        type: String
-    }
-}
+  name: "Equipment",
+  props: {
+    type: String
+  }
+};
 </script>
 
 <style scoped>
@@ -20,5 +20,4 @@ export default {
   border: 2px solid #999;
   background-position: center;
 }
-
 </style>
