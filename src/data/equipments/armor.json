@@ -1,0 +1,12 @@
+[
+  {
+    "id": 401,
+    "name": "Red Nose",
+    "type": "armor",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 111
+    }
+  }
+]

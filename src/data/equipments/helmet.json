@@ -1,0 +1,12 @@
+[
+  {
+    "id": 301,
+    "name": "Giath's",
+    "type": "helmet",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 95
+    }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "id": 101,
+    "name": "Kzarka",
+    "type": "mainhand",
+    "grade": "red",
+    "stats": {
+      "ap": 135,
+      "dp": 0
+    }
+  }
+]

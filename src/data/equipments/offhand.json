@@ -1,0 +1,12 @@
+[
+  {
+    "id": 201,
+    "name": "Nouver",
+    "type": "offhand",
+    "grade": "red",
+    "stats": {
+      "ap": 84,
+      "dp": 38
+    }
+  }
+]

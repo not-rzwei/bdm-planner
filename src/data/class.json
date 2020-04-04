@@ -1,0 +1,51 @@
+[
+  {
+    "id": 100,
+    "name": "Warrior",
+    "mainhand": "Longsword",
+    "offhand": "Shield",
+    "base_id": 0
+  },
+  {
+    "id": 200,
+    "name": "Ranger",
+    "mainhand": "Longbow",
+    "offhand": "Dagger",
+    "base_id": 0
+  },
+  {
+    "id": 300,
+    "name": "Witch",
+    "mainhand": "Staff",
+    "offhand": "Dagger",
+    "base_id": 0
+  },
+  {
+    "id": 400,
+    "name": "Giant",
+    "mainhand": "Axe",
+    "offhand": "Knot",
+    "base_id": 0
+  },
+  {
+    "id": 500,
+    "name": "Valkyrie",
+    "mainhand": "Longsword",
+    "offhand": "Shield",
+    "base_id": 0
+  },
+  {
+    "id": 700,
+    "name": "Sorceress",
+    "mainhand": "Amulet",
+    "offhand": "Talisman",
+    "base_id": 0
+  },
+  {
+    "id": 800,
+    "name": "Dark Knight",
+    "mainhand": "Kriegsmesser",
+    "offhand": "Knot",
+    "base_id": 0
+  }
+]
