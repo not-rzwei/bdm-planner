@@ -74,7 +74,6 @@ main {
   position: absolute;
   top: 0;
   left: -200px;
-  /* max-width: 700px; */
   z-index: 0;
 }
 

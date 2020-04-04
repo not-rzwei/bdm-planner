@@ -2,18 +2,21 @@
   <div id="app">
     <Header />
     <Main />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "@/components/Header.vue";
 import Main from "@/components/Main.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
   components: {
     Header,
-    Main
+    Main,
+    Footer
   }
 };
 </script>
@@ -26,5 +29,6 @@ html, body, #app {
 #app {
   background: url(~@/assets/ranger_bg.jpg) no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 </style>
