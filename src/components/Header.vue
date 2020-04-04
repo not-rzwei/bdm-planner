@@ -2,7 +2,7 @@
   <header>
     <!-- Image and text -->
     <b-navbar variant="dark" type="dark">
-      <b-container fluid="lg">
+      <b-container fluid="xl">
         <b-navbar-brand href="/">
           <img
             src="@/assets/bdm_logo.png"
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "Header",
+  name: "Header"
 };
 </script>
 
