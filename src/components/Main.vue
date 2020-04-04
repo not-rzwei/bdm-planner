@@ -10,22 +10,28 @@
           />
         </div>
 
-        <b-col offset="4" cols="3" class="slots">
-          <b-row v-for="n in 5" :key="n" align-h="end">
-            <b-col cols="4">
-              <div class="slot used"></div>
-            </b-col>
-            <b-col>
-              <div class="slot used"></div>
-            </b-col>
-          </b-row>
+        <b-col offset="5" cols="2" class="slots text-right">
+          <EquipmentSlot type="mainhand" />
+          <EquipmentSlot type="offhand" />
+          <EquipmentSlot type="helmet" />
+          <EquipmentSlot type="armor" />
+          <EquipmentSlot type="gloves" />
+          <EquipmentSlot type="shoes" />
+          <EquipmentSlot type="ring" />
+          <EquipmentSlot type="necklace" />
+          <EquipmentSlot type="belt" />
+          <EquipmentSlot type="earring" />
+          <EquipmentSlot type="invisible"/>
+          <EquipmentSlot type="bracelet" />
+          <EquipmentSlot type="relic" />
+          <EquipmentSlot type="alchemy" />
         </b-col>
 
-        <b-col cols="5" class="items">
+        <b-col cols="5" class="inventory">
           <b-card no-body>
             <b-tabs pills card>
               <b-tab title="Weapon" active>
-                <div class="slot item unused" v-for="n in 15" :key="n"></div>
+                <Equipment v-for="n in 15" :key="n" />
               </b-tab>
               <b-tab title="Armor">Armors</b-tab>
               <b-tab title="Accessory">Accessories</b-tab>
@@ -56,8 +62,15 @@
 </template>
 
 <script>
+import EquipmentSlot from "@/components/EquipmentSlot.vue";
+import Equipment from "@/components/Equipment.vue";
+
 export default {
   name: "Main",
+  components: {
+    EquipmentSlot,
+    Equipment
+  },
 };
 </script>
 
@@ -66,8 +79,12 @@ main {
   padding: 4rem 0;
 }
 
-.slots .row {
-  margin-bottom: 1rem;
+.slots .slot {
+  margin: 0.25rem;
+}
+
+.inventory .equipment {
+  margin: 0.5rem;
 }
 
 .class-image {
@@ -75,25 +92,6 @@ main {
   top: 0;
   left: -200px;
   z-index: 0;
-}
-
-.slot {
-  display: inline-block;
-  width: 64px;
-  height: 64px;
-  background: #ddd;
-  border-radius: 50%;
-  border: 2px solid #999;
-}
-
-.slot.used {
-  background-image: url(~@/assets/placeholders/armor.png);
-  background-position: center;
-}
-
-.slot.unused {
-  border-radius: 0;
-  margin: 0 1rem 1rem 0;
 }
 
 .stats {
