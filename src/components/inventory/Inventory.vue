@@ -2,7 +2,11 @@
   <b-col cols="5" class="inventory">
     <b-card no-body>
       <b-tabs pills card>
-        <b-tab :title="type[0].toUpperCase() + type.slice(1)" v-for="type in ['weapons', 'armors']" :key="type">
+        <b-tab
+          :title="type[0].toUpperCase() + type.slice(1)"
+          v-for="type in ['weapons', 'armors']"
+          :key="type"
+        >
           <template v-for="equip in myself[type]">
             <Equipment
               :equip="equip"
@@ -29,12 +33,29 @@
     </b-card>
 
     <b-modal id="inventory-modal" :title="selected.fullName" @ok="didEquip">
-      <div class="d-block text-center">
-        <h3></h3>
-        <div class="container">
-          <b-row></b-row>
+      <template v-if="selected !== ''">
+        <div class="d-block">
+          <div class="container">
+            <b-row>
+              <b-col cols="3">
+                <img
+                  class="mw-100"
+                  :src="require(`@/assets/equipments/${selected.id}.png`)"
+                />
+              </b-col>
+              <b-col>
+                <b-row>
+                  <b-col>
+                    CP: {{ selected.totalCP }}<br />
+                    AP: {{ selected.stats.ap }}<br />
+                    DP: {{ selected.stats.dp }}
+                  </b-col>
+                </b-row>
+              </b-col>
+            </b-row>
+          </div>
         </div>
-      </div>
+      </template>
 
       <template v-slot:modal-footer="{ ok }">
         <b-button size="md" variant="success" @click="ok()">
@@ -98,7 +119,7 @@ export default {
   margin: 0.5rem;
 }
 
-.tabs a{
+.tabs a {
   text-transform: capitalize;
 }
 </style>

@@ -28,6 +28,10 @@ class Equipment {
     return `${this.name} ${this.type.charAt(0).toUpperCase() +
       this.type.slice(1)}`;
   }
+
+  get totalCP() {
+    return this.stats.ap + this.stats.dp;
+  }
 }
 
 export default Equipment;
