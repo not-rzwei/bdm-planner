@@ -20,8 +20,10 @@
               :key="equip.id + 1000"
             >
               <template v-slot:title>{{ equip.fullName }}</template>
-              <div class="status-hover">
-                <span v-if="equip.stats.ap">AP: {{ equip.stats.ap }}</span>
+              <div class="status-hover text-center">
+                <span v-if="equip.stats.ap">
+                  AP: {{ equip.stats.ap }}<br />
+                </span>
                 <span v-if="equip.stats.dp">DP: {{ equip.stats.dp }}</span>
               </div>
             </b-popover>
