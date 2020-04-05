@@ -13,7 +13,7 @@ class BDMP {
   };
 
   useEquip(id) {
-    var equip = this.equipmentList.find(eq => eq.id == id);
+    var equip = this.findEquip(id);
 
     if (equip) {
       this.equipment[equip.type] = equip;
@@ -25,6 +25,10 @@ class BDMP {
 
   removeEquip(type) {
     this.equipment[type] = new Equipment({ type: type });
+  }
+
+  findEquip(id) {
+    return this.equipmentList.find(eq => eq.id == id);
   }
 }
 
