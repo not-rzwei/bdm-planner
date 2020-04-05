@@ -16,6 +16,7 @@ class BDMP {
     var equip = this.findEquip(id);
 
     if (equip) {
+      equip.bound = true;
       this.equipment[equip.type] = equip;
       this.removeFromList(id);
 
@@ -25,8 +26,16 @@ class BDMP {
     return false;
   }
 
-  removeEquip(type) {
-    this.equipment[type] = new Equipment({ type: type });
+  removeEquip(equip) {
+    this.addToList(equip);
+    this.equipment[equip.type] = new Equipment();
+  }
+
+  addToList(equip) {
+    var addedList = this.equipmentList;
+
+    addedList.push(equip);
+    this.equipmentList = addedList;
   }
 
   removeFromList(id) {

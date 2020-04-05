@@ -39,9 +39,12 @@
       </div>
     </template>
 
-    <template v-slot:modal-footer="{ ok }">
-      <b-button size="md" variant="success" @click="ok()">
+    <template v-slot:modal-footer>
+      <b-button size="lg" @click="ok()" v-if="!equip.bound">
         Equip
+      </b-button>
+      <b-button size="lg" variant="danger" @click="ok()" v-else>
+        Unequip
       </b-button>
     </template>
   </b-modal>
@@ -50,7 +53,7 @@
 <script>
 export default {
   name: "EquipmentModal",
-  props: ["id", "equip", "ok"]
+  props: ["id", "equip", "ok", "fail"]
 };
 </script>
 

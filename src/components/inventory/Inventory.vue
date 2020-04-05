@@ -34,7 +34,7 @@
       </b-tabs>
     </b-card>
 
-    <EquipmentModal id="inventory-modal" :equip="selected" :ok="didEquip" />
+    <EquipmentModal :id="modal_id" :equip="selected" :ok="didEquip" />
   </b-col>
 </template>
 
@@ -51,7 +51,8 @@ export default {
   data: function() {
     return {
       selected: "",
-      myself: this
+      myself: this,
+      modal_id: "inventory-modal"
     };
   },
   computed: {
@@ -70,12 +71,13 @@ export default {
     },
     selectItem: function(equip) {
       this.selected = equip;
-      this.$bvModal.show("inventory-modal");
+      this.$bvModal.show(this.modal_id);
     },
     didEquip: function() {
       this.$root.BDMP.useEquip(this.selected.id);
       this.makeToast();
       this.selected = "";
+      this.$bvModal.hide(this.modal_id);
     },
     makeToast: function() {
       this.$bvToast.toast(`Equipped ${this.selected.fullName}`, {

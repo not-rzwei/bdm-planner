@@ -11,6 +11,7 @@ class Equipment {
     max: 40,
     current: 0
   };
+  bound = false;
 
   constructor(obj = {}) {
     this.id = obj.id || 0;

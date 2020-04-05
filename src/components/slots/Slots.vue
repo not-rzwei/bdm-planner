@@ -10,7 +10,12 @@
         'shoes'
       ]"
     >
-      <EquipmentSlot :equip="equipment[type]" :type="type" :key="type" @click.native="selectSlot(type)" />
+      <EquipmentSlot
+        :equip="equipment[type]"
+        :type="type"
+        :key="type"
+        @click.native="selectSlot(type)"
+      />
     </template>
 
     <EquipmentSlot type="ring" />
@@ -22,7 +27,7 @@
     <EquipmentSlot type="relic" />
     <EquipmentSlot type="alchemy" />
 
-    <EquipmentModal id="slot-modal" :equip="selected" :ok="unequip" />
+    <EquipmentModal :id="modal_id" :equip="selected" :ok="unequip" />
   </b-col>
 </template>
 
@@ -38,7 +43,8 @@ export default {
   },
   data: function() {
     return {
-      selected: ""
+      selected: "",
+      modal_id: "slot-modal"
     };
   },
   computed: {
@@ -49,10 +55,12 @@ export default {
   methods: {
     selectSlot: function(type) {
       this.selected = this.equipment[type];
-      this.$bvModal.show("slot-modal");
+      this.$bvModal.show(this.modal_id);
     },
     unequip: function() {
-      console.log("UNEQUIPED");
+      this.$root.BDMP.removeEquip(this.selected);
+      this.$bvModal.hide(this.modal_id);
+      this.selected = "";
     }
   }
 };

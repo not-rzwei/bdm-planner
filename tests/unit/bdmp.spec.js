@@ -30,7 +30,7 @@ describe("BDMP.js", () => {
     bdmp.useEquip(501);
     expect(bdmp.equipment.gloves).to.equal(noir);
 
-    bdmp.removeEquip("gloves");
+    bdmp.removeEquip(noir);
     expect(bdmp.equipment.gloves).to.not.equal(noir);
   });
 });
