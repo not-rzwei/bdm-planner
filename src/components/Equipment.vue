@@ -25,7 +25,7 @@ export default {
   width: 64px;
   height: 64px;
   background: #ddd;
-  /* border: 2px solid #999; */
   background-position: center;
+  cursor: pointer;
 }
 </style>

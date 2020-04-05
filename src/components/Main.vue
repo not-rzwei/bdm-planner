@@ -11,7 +11,6 @@
         </div>
 
         <Slots />
-
         <Inventory />
       </b-row>
 
