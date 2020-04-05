@@ -22,6 +22,10 @@ class BDMP {
 
     return false;
   }
+
+  removeEquip(type) {
+    this.equipment[type] = new Equipment({ type: type });
+  }
 }
 
 export default BDMP;
