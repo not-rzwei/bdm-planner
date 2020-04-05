@@ -17,6 +17,8 @@ class BDMP {
 
     if (equip) {
       this.equipment[equip.type] = equip;
+      this.removeFromList(id);
+
       return true;
     }
 
@@ -25,6 +27,13 @@ class BDMP {
 
   removeEquip(type) {
     this.equipment[type] = new Equipment({ type: type });
+  }
+
+  removeFromList(id) {
+    var list = this.equipmentList
+    var removedList = list.filter(eq => eq.id != id);
+
+    this.equipmentList = removedList;
   }
 
   findEquip(id) {
