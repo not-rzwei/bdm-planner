@@ -9,11 +9,13 @@
           <b-row class="m-2">
             <b-col>
               <span v-if="equip.stats.ap"
-                >Attack (AP) {{ equip.stats.ap }}<br></span
-              >
+                >Attack (AP) {{ equip.stats.ap }}<br
+              /></span>
+
               <span v-if="equip.stats.dp"
-                >Defense (DP) {{ equip.stats.dp }}<br></span
-              >
+                >Defense (DP) {{ equip.stats.dp }}<br
+              /></span>
+
               <span>Enhancement +{{ equip.enhancement.current }}</span>
             </b-col>
           </b-row>
@@ -21,13 +23,13 @@
             <b-col>
               <b-input-group
                 prepend="0"
-                :append="equip.enhancement.max"
+                :append="String(equip.enhancement.max)"
                 class="px-4 my-3"
               >
                 <b-form-input
                   type="range"
                   min="0"
-                  :value="equip.enhancement.current"
+                  v-model="equip.enhancement.current"
                   :max="equip.enhancement.max"
                 ></b-form-input>
               </b-input-group>

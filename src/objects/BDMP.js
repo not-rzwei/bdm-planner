@@ -30,7 +30,7 @@ class BDMP {
   }
 
   removeFromList(id) {
-    var list = this.equipmentList
+    var list = this.equipmentList;
     var removedList = list.filter(eq => eq.id != id);
 
     this.equipmentList = removedList;
