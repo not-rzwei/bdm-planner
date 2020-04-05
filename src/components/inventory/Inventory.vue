@@ -24,9 +24,12 @@
       </b-tabs>
     </b-card>
 
-    <b-modal id="inventory-modal" :title="selected.name">
+    <b-modal id="inventory-modal" :title="selected.fullName" @ok="didEquip">
       <div class="d-block text-center">
         <h3></h3>
+        <div class="container">
+          <b-row></b-row>
+        </div>
       </div>
 
       <template v-slot:modal-footer="{ ok }">
@@ -68,6 +71,9 @@ export default {
     selectItem: function(equip) {
       this.selected = equip;
       this.$bvModal.show("inventory-modal");
+    },
+    didEquip: function() {
+      this.$BDMP.useEquip(this.selected.id);
     }
   }
 };
