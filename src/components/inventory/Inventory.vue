@@ -32,47 +32,19 @@
       </b-tabs>
     </b-card>
 
-    <b-modal id="inventory-modal" :title="selected.fullName" @ok="didEquip">
-      <template v-if="selected !== ''">
-        <div class="d-block">
-          <div class="container">
-            <b-row>
-              <b-col cols="3">
-                <img
-                  class="mw-100"
-                  :src="require(`@/assets/equipments/${selected.id}.png`)"
-                />
-              </b-col>
-              <b-col>
-                <b-row>
-                  <b-col>
-                    CP: {{ selected.totalCP }}<br />
-                    AP: {{ selected.stats.ap }}<br />
-                    DP: {{ selected.stats.dp }}
-                  </b-col>
-                </b-row>
-              </b-col>
-            </b-row>
-          </div>
-        </div>
-      </template>
-
-      <template v-slot:modal-footer="{ ok }">
-        <b-button size="md" variant="success" @click="ok()">
-          Equip
-        </b-button>
-      </template>
-    </b-modal>
+    <EquipmentModal :equip="selected" :ok="didEquip" />
   </b-col>
 </template>
 
 <script>
 import Equipment from "@/components/inventory/Equipment.vue";
+import EquipmentModal from "@/components/inventory/EquipmentModal.vue";
 
 export default {
   name: "Inventory",
   components: {
-    Equipment
+    Equipment,
+    EquipmentModal
   },
   data: function() {
     return {
