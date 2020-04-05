@@ -36,8 +36,8 @@
 </template>
 
 <script>
-import Slots from "@/components/Slots.vue";
-import Inventory from "@/components/Inventory.vue";
+import Slots from "@/components/slots/Slots.vue";
+import Inventory from "@/components/inventory/Inventory.vue";
 
 export default {
   name: "Main",

@@ -18,7 +18,7 @@
 </template>
 
 <script>
-import EquipmentSlot from "@/components/EquipmentSlot.vue";
+import EquipmentSlot from "@/components/slots/EquipmentSlot.vue";
 
 export default {
   name: "Slots",
