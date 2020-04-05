@@ -32,7 +32,7 @@
       </b-tabs>
     </b-card>
 
-    <EquipmentModal :equip="selected" :ok="didEquip" />
+    <EquipmentModal id="inventory-modal" :equip="selected" :ok="didEquip" />
   </b-col>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <b-modal id="inventory-modal" :title="equip.fullName" @ok="ok">
+  <b-modal :id="id" :title="equip.fullName" @ok="ok">
     <template v-if="equip !== ''">
       <div class="d-block text-center">
         <div class="container">
@@ -50,7 +50,7 @@
 <script>
 export default {
   name: "EquipmentModal",
-  props: ["equip", "ok"]
+  props: ["id", "equip", "ok"]
 };
 </script>
 
