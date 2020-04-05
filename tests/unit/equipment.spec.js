@@ -4,18 +4,18 @@ import EquipmentList from "../../src/objects/EquipmentList";
 
 describe("Equipment.js", () => {
   it("return an object", () => {
-    expect(Equipment).to.be.an("object");
+    expect(new Equipment()).to.be.an("object");
   });
 
   it("type return armor", () => {
-    var armor = Object.create(Equipment);
+    var armor = new Equipment();
     armor.type = "armor";
 
     expect(armor.type).to.equal("armor");
   });
 
   it("return equipment full name", () => {
-    var bhegArmor = Object.create(Equipment);
+    var bhegArmor = new Equipment();
     bhegArmor.name = "Bheg's";
     bhegArmor.type = "Armor";
 
