@@ -24,7 +24,7 @@ class Equipment {
     }
   }
 
-  fullName() {
+  get fullName() {
     return `${this.name} ${this.type}`;
   }
 }

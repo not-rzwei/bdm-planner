@@ -19,7 +19,7 @@ describe("Equipment.js", () => {
     bhegArmor.name = "Bheg's";
     bhegArmor.type = "Armor";
 
-    expect(bhegArmor.fullName()).to.equal("Bheg's Armor");
+    expect(bhegArmor.fullName).to.equal("Bheg's Armor");
   });
 });
 
