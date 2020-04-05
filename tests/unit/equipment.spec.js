@@ -1,5 +1,6 @@
 import { expect } from "chai";
 import Equipment from "../../src/objects/Equipment";
+import EquipmentList from "../../src/objects/EquipmentList";
 
 describe("Equipment.js", () => {
   it("return an object", () => {
@@ -19,5 +20,11 @@ describe("Equipment.js", () => {
     bhegArmor.type = "Armor";
 
     expect(bhegArmor.fullName()).to.equal("Bheg's Armor");
+  });
+});
+
+describe("EquipmentList.js", () => {
+  it("return an array", () => {
+    expect(EquipmentList).to.be.an("array");
   });
 });
