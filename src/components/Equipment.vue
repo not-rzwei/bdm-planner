@@ -1,12 +1,20 @@
 <template>
-  <div class="equipment" :class="type"></div>
+  <div class="equipment" :class="type">
+    <img class="mw-100 mh-100" :src="getImage" />
+  </div>
 </template>
 
 <script>
 export default {
   name: "Equipment",
   props: {
-    type: String
+    type: String,
+    equip: Object
+  },
+  computed: {
+    getImage: function() {
+      return require(`@/assets/equipments/${this.equip.id}.png`);
+    }
   }
 };
 </script>
@@ -17,7 +25,7 @@ export default {
   width: 64px;
   height: 64px;
   background: #ddd;
-  border: 2px solid #999;
+  /* border: 2px solid #999; */
   background-position: center;
 }
 </style>
