@@ -1,6 +1,5 @@
 <template>
   <header>
-    <!-- Image and text -->
     <b-navbar variant="dark" type="dark">
       <b-container fluid="xl">
         <b-navbar-brand href="/">

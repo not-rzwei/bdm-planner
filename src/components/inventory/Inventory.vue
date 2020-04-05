@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     filterEquip: function(filters) {
-      return this.$BDMP.equipmentList.filter(function(eq) {
+      return this.$root.BDMP.equipmentList.filter(function(eq) {
         return filters.includes(eq.type);
       });
     },
@@ -73,7 +73,7 @@ export default {
       this.$bvModal.show("inventory-modal");
     },
     didEquip: function() {
-      this.$BDMP.useEquip(this.selected.id);
+      this.$root.BDMP.useEquip(this.selected.id);
     }
   }
 };

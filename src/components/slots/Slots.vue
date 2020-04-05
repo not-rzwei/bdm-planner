@@ -1,11 +1,11 @@
 <template>
   <b-col offset="5" cols="2" class="slots text-right">
-    <EquipmentSlot type="mainhand" />
-    <EquipmentSlot type="offhand" />
-    <EquipmentSlot type="helmet" />
-    <EquipmentSlot type="armor" />
-    <EquipmentSlot type="gloves" />
-    <EquipmentSlot type="shoes" />
+    <EquipmentSlot :equip="equipment.mainhand" type="mainhand" />
+    <EquipmentSlot :equip="equipment.offhand" type="offhand" />
+    <EquipmentSlot :equip="equipment.helmet" type="helmet" />
+    <EquipmentSlot :equip="equipment.armor" type="armor" />
+    <EquipmentSlot :equip="equipment.gloves" type="gloves" />
+    <EquipmentSlot :equip="equipment.shoes" type="shoes" />
     <EquipmentSlot type="ring" />
     <EquipmentSlot type="necklace" />
     <EquipmentSlot type="belt" />
@@ -24,6 +24,11 @@ export default {
   name: "Slots",
   components: {
     EquipmentSlot
+  },
+  computed: {
+    equipment: function() {
+      return this.$root.BDMP.equipment;
+    }
   }
 };
 </script>

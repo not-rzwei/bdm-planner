@@ -25,7 +25,7 @@ class Equipment {
   }
 
   get fullName() {
-    return `${this.name} ${this.type}`;
+    return `${this.name} ${this.type.charAt(0).toUpperCase() + this.type.slice(1)}`;
   }
 }
 

@@ -1,12 +1,26 @@
 <template>
-  <div class="slot" :class="type"></div>
+  <div class="slot" :class="[type, gradeClass]">
+    <template v-if="equip != undefined && equip.id != 0">
+      <img :src="getImage" />
+    </template>
+  </div>
 </template>
 
 <script>
 export default {
   name: "EquipmentSlot",
   props: {
-    type: String
+    type: String,
+    equip: Object
+  },
+  computed: {
+    getImage: function() {
+      return require(`@/assets/equipments/${this.equip.id}.png`);
+    },
+    gradeClass: function() {
+      let equip = this.equip;
+      return equip != undefined && equip.id != 0 ? equip.grade : "";
+    }
   }
 };
 </script>
@@ -20,6 +34,16 @@ export default {
   border-radius: 50%;
   border: 2px solid #999;
   background-position: center;
+  overflow: hidden;
+}
+
+.slot img {
+  width: 100%;
+  height: 100%;
+}
+
+.slot.red {
+  border-color: #dc3545;
 }
 
 .slot.mainhand {
