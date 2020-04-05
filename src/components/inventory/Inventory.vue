@@ -2,25 +2,29 @@
   <b-col cols="5" class="inventory">
     <b-card no-body>
       <b-tabs pills card>
-        <b-tab title="Weapon" active>
-          <template v-for="weapon in weapons">
+        <b-tab :title="type[0].toUpperCase() + type.slice(1)" v-for="type in ['weapons', 'armors']" :key="type">
+          <template v-for="equip in myself[type]">
             <Equipment
-              :equip="weapon"
-              :key="weapon.id"
-              @click.native="selectItem(weapon)"
+              :equip="equip"
+              :key="equip.id"
+              @click.native="selectItem(equip)"
             />
+            <b-popover
+              :target="`eq${equip.id}`"
+              triggers="hover"
+              placement="top"
+              :key="equip.id + 1000"
+            >
+              <template v-slot:title>{{ equip.fullName }}</template>
+              <div class="status-hover">
+                <span v-if="equip.stats.ap">AP: {{ equip.stats.ap }}</span>
+                <span v-if="equip.stats.dp">DP: {{ equip.stats.dp }}</span>
+              </div>
+            </b-popover>
           </template>
         </b-tab>
-        <b-tab title="Armor">
-          <template v-for="armor in armors">
-            <Equipment
-              :equip="armor"
-              :key="armor.id"
-              @click.native="selectItem(armor)"
-            />
-          </template>
-        </b-tab>
-        <b-tab title="Accessory">WIP</b-tab>
+
+        <b-tab title="Accessory">TBA</b-tab>
       </b-tabs>
     </b-card>
 
@@ -51,7 +55,8 @@ export default {
   },
   data: function() {
     return {
-      selected: ""
+      selected: "",
+      myself: this
     };
   },
   computed: {
@@ -74,6 +79,15 @@ export default {
     },
     didEquip: function() {
       this.$root.BDMP.useEquip(this.selected.id);
+      this.makeToast();
+      this.selected = "";
+    },
+    makeToast: function() {
+      this.$bvToast.toast(`Equipped ${this.selected.fullName}`, {
+        title: "Notification",
+        autoHideDelay: 3000,
+        solid: true
+      });
     }
   }
 };
@@ -82,5 +96,9 @@ export default {
 <style scoped>
 .inventory .equipment {
   margin: 0.5rem;
+}
+
+.tabs a{
+  text-transform: capitalize;
 }
 </style>

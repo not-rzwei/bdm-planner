@@ -1,14 +1,6 @@
 <template>
   <div class="equipment" :class="type" :id="`eq${equip.id}`">
     <img class="mw-100 mh-100" :src="getImage" />
-
-    <b-popover :target="`eq${equip.id}`" triggers="hover" placement="top">
-      <template v-slot:title>{{ equip.fullName }}</template>
-      <div class="status-hover">
-        <span v-if="equip.stats.ap">AP: {{ equip.stats.ap }}</span>
-        <span v-if="equip.stats.dp">DP: {{ equip.stats.dp }}</span>
-      </div>
-    </b-popover>
   </div>
 </template>
 
