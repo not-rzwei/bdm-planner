@@ -67,12 +67,7 @@ class Equipment {
 
     if (this.type == "offhand") {
       const [ap, dp] = enhanceDataUntilLevel.reduce(
-        (prev, next) =>
-          [
-            prev[0] + next[0],
-            prev[1] + next[1]
-          ]
-        ,
+        (prev, next) => [prev[0] + next[0], prev[1] + next[1]],
         [this.stats.baseAP, this.stats.baseDP]
       );
 

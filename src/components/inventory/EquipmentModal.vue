@@ -16,7 +16,7 @@
                 >Defense (DP) {{ equip.stats.dp }}<br
               /></span>
 
-              <span>Enhancement +{{ equip.enhancement.current }}</span>
+              <span>Enhancement +{{ enhanceLevel }}</span>
             </b-col>
           </b-row>
           <b-row>
@@ -29,7 +29,7 @@
                 <b-form-input
                   type="range"
                   min="0"
-                  v-model="equip.enhancement.current"
+                  v-model="enhanceLevel"
                   :max="equip.enhancement.max"
                 ></b-form-input>
               </b-input-group>
@@ -53,7 +53,18 @@
 <script>
 export default {
   name: "EquipmentModal",
-  props: ["id", "equip", "ok", "fail"]
+  props: ["id", "equip", "ok", "fail"],
+  computed: {
+    enhanceLevel: {
+      get: function() {
+        return this.equip.enhancement.current;
+      },
+      set: function(level) {
+        this.equip.enhancement.current = level;
+        this.equip.setEnhancement(Number(level));
+      }
+    }
+  }
 };
 </script>
 
