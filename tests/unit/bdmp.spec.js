@@ -35,4 +35,22 @@ describe("BDMP.js", () => {
       expect(bdmp.equipment.gloves).to.not.equal(noir);
     });
   });
+
+  describe("Stats test", () => {
+    it("return 135 CP when equip kzarka", () => {
+      var bdmp = new BDMP();
+
+      bdmp.useEquip(101);
+
+      expect(bdmp.stats.cp.total).to.equal(135);
+    });
+
+    it("return 122 CP when equip nouver", () => {
+      var bdmp = new BDMP();
+
+      bdmp.useEquip(201);
+
+      expect(bdmp.stats.cp.total).to.equal(122);
+    });
+  });
 });

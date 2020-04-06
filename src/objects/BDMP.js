@@ -1,7 +1,7 @@
 import EquipmentList from "./EquipmentList";
 import Equipment from "./Equipment";
 
-class BDMP {
+const BDMP = class {
   equipmentList = EquipmentList;
   equipment = {
     mainhand: new Equipment({ type: "mainhand" }),
@@ -48,6 +48,30 @@ class BDMP {
   findEquip(id) {
     return this.equipmentList.find(eq => eq.id == id);
   }
-}
+
+  get stats() {
+    return {
+      cp: this.equipmentsCP()
+    };
+  }
+
+  equipmentsCP() {
+    const cp = Object.values(this.equipment).reduce(
+      (acc, cur) => {
+        acc.ap += cur.stats.ap;
+        acc.dp += cur.stats.dp;
+
+        return acc;
+      },
+      { ap: 0, dp: 0 }
+    );
+
+    return {
+      total: cp.ap + cp.dp,
+      ap: cp.ap,
+      dp: cp.dp
+    };
+  }
+};
 
 export default BDMP;
