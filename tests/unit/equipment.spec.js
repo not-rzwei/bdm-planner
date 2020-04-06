@@ -14,16 +14,16 @@ describe("Equipment.js", () => {
   });
 
   it("return equipment full name", () => {
-    var bhegArmor = new Equipment();
-    bhegArmor.name = "Bheg's";
-    bhegArmor.type = "Armor";
+    var bhegGloves = new Equipment();
+    bhegGloves.name = "Bheg's";
+    bhegGloves.type = "Gloves";
 
-    expect(bhegArmor.fullName).to.equal("Bheg's Armor");
+    expect(bhegGloves.fullName).to.equal("Bheg's Gloves");
   });
 
   it("return enhancement level", () => {
     var kzarka = new Equipment();
-    kzarka.stats.ap = 135;
+    kzarka.stats.baseAP = 135;
     kzarka.type = "mainhand";
     kzarka.grade = "red";
 
@@ -33,13 +33,36 @@ describe("Equipment.js", () => {
     expect(kzarka.enhancement.current).to.equal(5);
   });
 
-  it("return 484 CP for +40 kzarka", () => {
+  it("return 484 AP for +40 kzarka", () => {
     var kzarka = new Equipment();
-    kzarka.stats.ap = 135;
+    kzarka.stats.baseAP = 135;
     kzarka.type = "mainhand";
     kzarka.grade = "red";
 
     kzarka.setEnhancement(40);
     expect(kzarka.stats.ap).to.equal(484);
+  });
+
+  it("return 213 AP for +10 and 158 for +3 kzarka", () => {
+    var kzarka = new Equipment();
+    kzarka.stats.baseAP = 135;
+    kzarka.type = "mainhand";
+    kzarka.grade = "red";
+
+    kzarka.setEnhancement(3);
+    expect(kzarka.stats.ap).to.equal(158);
+
+    kzarka.setEnhancement(10);
+    expect(kzarka.stats.ap).to.equal(213);
+  });
+
+  it("return 167 DP for +10 red nose", () => {
+    var rednose = new Equipment();
+    rednose.stats.baseDP = 111;
+    rednose.type = "armor";
+    rednose.grade = "red";
+
+    rednose.setEnhancement(10);
+    expect(rednose.stats.dp).to.equal(167);
   });
 });

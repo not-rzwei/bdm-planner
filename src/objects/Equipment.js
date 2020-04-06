@@ -7,7 +7,9 @@ class Equipment {
   grade;
   stats = {
     ap: 0,
-    dp: 0
+    dp: 0,
+    baseAP: 0,
+    baseDP: 0
   };
   enhancement = {
     max: 40,
@@ -25,6 +27,8 @@ class Equipment {
     if (obj.stats !== undefined) {
       this.stats.ap = obj.stats.ap;
       this.stats.dp = obj.stats.dp;
+      this.stats.baseAP = obj.stats.ap;
+      this.stats.baseDP = obj.stats.dp;
     }
   }
 
@@ -43,13 +47,25 @@ class Equipment {
     const enhanceData = this.enhancementData[this.type][this.grade];
     const enhanceDataUntilLevel = enhanceData.slice(0, level + 1);
 
-    const enhanceSum = enhanceDataUntilLevel.reduce(
-      (prev, next) => prev + next,
-      this.stats.ap
-    );
+    if (["armor", "helmet", "gloves", "shoes"].includes(this.type)) {
+      const enhanceSum = enhanceDataUntilLevel.reduce(
+        (prev, next) => prev + next,
+        this.stats.baseDP
+      );
+
+      this.stats.dp = enhanceSum;
+    }
+
+    if (this.type == "mainhand") {
+      const enhanceSum = enhanceDataUntilLevel.reduce(
+        (prev, next) => prev + next,
+        this.stats.baseAP
+      );
+
+      this.stats.ap = enhanceSum;
+    }
 
     this.enhancement.current = level;
-    this.stats.ap = enhanceSum;
   }
 }
 
