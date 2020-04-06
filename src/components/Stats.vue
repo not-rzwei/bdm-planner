@@ -5,15 +5,15 @@
     </b-col>
     <b-col>
       <small>Combat (CP)</small>
-      <p class="lead m-0">0</p>
+      <p class="lead m-0">{{ stats.cp.total }}</p>
     </b-col>
     <b-col>
       <small>Attack (AP)</small>
-      <p class="lead m-0">0</p>
+      <p class="lead m-0">{{ stats.cp.ap }}</p>
     </b-col>
     <b-col>
       <small>Defense (DP)</small>
-      <p class="lead m-0">0</p>
+      <p class="lead m-0">{{ stats.cp.dp }}</p>
     </b-col>
   </b-row>
 </template>
@@ -21,7 +21,12 @@
 <script>
 export default {
   name: "Stats",
-}
+  computed: {
+    stats: function(){
+      return this.$root.BDMP.stats
+    }
+  }
+};
 </script>
 
 <style scoped>
