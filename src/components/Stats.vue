@@ -22,8 +22,8 @@
 export default {
   name: "Stats",
   computed: {
-    stats: function(){
-      return this.$root.BDMP.stats
+    stats: function() {
+      return this.$root.BDMP.stats;
     }
   }
 };

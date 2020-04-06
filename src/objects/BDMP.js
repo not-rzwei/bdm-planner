@@ -27,6 +27,7 @@ const BDMP = class {
   }
 
   removeEquip(equip) {
+    equip.bound = false;
     this.addToList(equip);
     this.equipment[equip.type] = new Equipment();
   }
