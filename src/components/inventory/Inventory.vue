@@ -75,16 +75,8 @@ export default {
     },
     didEquip: function() {
       this.$root.BDMP.useEquip(this.selected.id);
-      this.makeToast();
       this.selected = "";
       this.$bvModal.hide(this.modal_id);
-    },
-    makeToast: function() {
-      this.$bvToast.toast(`Equipped ${this.selected.fullName}`, {
-        title: "Notification",
-        autoHideDelay: 3000,
-        solid: true
-      });
     }
   }
 };
