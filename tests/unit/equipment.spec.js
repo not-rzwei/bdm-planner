@@ -1,6 +1,5 @@
 import { expect } from "chai";
 import Equipment from "../../src/objects/Equipment";
-import EquipmentList from "../../src/objects/EquipmentList";
 
 describe("Equipment.js", () => {
   it("return an object", () => {
@@ -21,10 +20,26 @@ describe("Equipment.js", () => {
 
     expect(bhegArmor.fullName).to.equal("Bheg's Armor");
   });
-});
 
-describe("EquipmentList.js", () => {
-  it("return an array", () => {
-    expect(EquipmentList).to.be.an("array");
+  it("return enhancement level", () => {
+    var kzarka = new Equipment();
+    kzarka.stats.ap = 135;
+    kzarka.type = "mainhand";
+    kzarka.grade = "red";
+
+    expect(kzarka.enhancement.current).to.equal(0);
+
+    kzarka.setEnhancement(5);
+    expect(kzarka.enhancement.current).to.equal(5);
+  });
+
+  it("return 484 CP for +40 kzarka", () => {
+    var kzarka = new Equipment();
+    kzarka.stats.ap = 135;
+    kzarka.type = "mainhand";
+    kzarka.grade = "red";
+
+    kzarka.setEnhancement(40);
+    expect(kzarka.stats.ap).to.equal(484);
   });
 });

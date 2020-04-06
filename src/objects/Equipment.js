@@ -1,3 +1,5 @@
+import EnhancementData from "../data/enhancement.json";
+
 class Equipment {
   id;
   name;
@@ -12,6 +14,7 @@ class Equipment {
     current: 0
   };
   bound = false;
+  enhancementData = EnhancementData;
 
   constructor(obj = {}) {
     this.id = obj.id || 0;
@@ -32,6 +35,21 @@ class Equipment {
 
   get totalCP() {
     return this.stats.ap + this.stats.dp;
+  }
+
+  setEnhancement(level) {
+    if (level < 0 || level > this.enhancement.max) return;
+
+    const enhanceData = this.enhancementData[this.type][this.grade];
+    const enhanceDataUntilLevel = enhanceData.slice(0, level + 1);
+
+    const enhanceSum = enhanceDataUntilLevel.reduce(
+      (prev, next) => prev + next,
+      this.stats.ap
+    );
+
+    this.enhancement.current = level;
+    this.stats.ap = enhanceSum;
   }
 }
 
