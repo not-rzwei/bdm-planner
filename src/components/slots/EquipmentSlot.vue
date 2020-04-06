@@ -1,6 +1,13 @@
 <template>
   <div class="slot" :class="[type, gradeClass]">
     <template v-if="equip != undefined && equip.id != 0">
+      
+      <template v-if="equip.enhancement.current > 0">
+      <span class="lead text-light">
+        +{{ equip.enhancement.current }}
+      </span>
+      </template>
+
       <img :src="getImage" />
     </template>
   </div>
@@ -34,13 +41,22 @@ export default {
   border-radius: 50%;
   border: 2px solid #999;
   background-position: center;
-  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
 }
 
 .slot img {
   width: 100%;
   height: 100%;
   cursor: pointer;
+  border-radius: 50%;
+}
+
+.slot span {
+  position: absolute;
+  top: -4px;
+  left: -8px;
+  text-shadow: 0.75px 0 0 black, -0.75px 0 0 black, 0 0.75px 0 black, 0 -0.75px 0 black;
 }
 
 .slot.red {

@@ -1,5 +1,5 @@
 <template>
-  <b-col offset="5" cols="2" class="slots text-right">
+  <b-col offset="5" cols="2" class="slots">
     <template
       v-for="type in [
         'mainhand',
