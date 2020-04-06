@@ -65,4 +65,16 @@ describe("Equipment.js", () => {
     rednose.setEnhancement(10);
     expect(rednose.stats.dp).to.equal(167);
   });
+
+  it("return 133 AP and 54 DP for +10 nouver", () => {
+    var nouver = new Equipment();
+    nouver.stats.baseAP = 84;
+    nouver.stats.baseDP = 38;
+    nouver.type = "offhand";
+    nouver.grade = "red";
+
+    nouver.setEnhancement(10);
+    expect(nouver.stats.ap).to.equal(133);
+    expect(nouver.stats.dp).to.equal(54);
+  });
 });

@@ -65,6 +65,21 @@ class Equipment {
       this.stats.ap = enhanceSum;
     }
 
+    if (this.type == "offhand") {
+      const [ap, dp] = enhanceDataUntilLevel.reduce(
+        (prev, next) =>
+          [
+            prev[0] + next[0],
+            prev[1] + next[1]
+          ]
+        ,
+        [this.stats.baseAP, this.stats.baseDP]
+      );
+
+      this.stats.ap = ap;
+      this.stats.dp = dp;
+    }
+
     this.enhancement.current = level;
   }
 }
