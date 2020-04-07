@@ -4,7 +4,7 @@
       <div class="d-block text-center">
         <div class="container">
           <b-row>
-            <img :src="require(`@/assets/equipments/${equip.id}.png`)" />
+            <img :src="getImage" />
           </b-row>
           <b-row class="m-2">
             <b-col>
@@ -53,8 +53,12 @@
 <script>
 export default {
   name: "EquipmentModal",
-  props: ["id", "equip", "ok", "fail"],
+  props: ["id", "equip", "ok"],
   computed: {
+    getImage: function() {
+      const basePath = process.env.BASE_URL;
+      return `${basePath}equipments/${this.equip.imageUri}`;
+    },
     enhanceLevel: {
       get: function() {
         return this.equip.enhancement.current;

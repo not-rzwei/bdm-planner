@@ -5,14 +5,19 @@
         <span class="lead text-light"> +{{ equip.enhancement.current }} </span>
       </template>
 
-      <img :src="getImage" />
+      <Equipment :equip="equip" />
     </template>
   </div>
 </template>
 
 <script>
+import Equipment from "../inventory/Equipment";
+
 export default {
   name: "EquipmentSlot",
+  components: {
+    Equipment
+  },
   props: {
     type: String,
     equip: Object
@@ -40,13 +45,6 @@ export default {
   background-position: center;
   position: relative;
   vertical-align: middle;
-}
-
-.slot img {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  border-radius: 50%;
 }
 
 .slot span {

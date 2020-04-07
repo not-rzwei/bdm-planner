@@ -12,21 +12,8 @@
               :equip="equip"
               :key="equip.id"
               @click.native="selectItem(equip)"
+              :tooltip="true"
             />
-            <b-popover
-              :target="`eq${equip.id}`"
-              triggers="hover"
-              placement="top"
-              :key="equip.id + 1000"
-            >
-              <template v-slot:title>{{ equip.fullName }}</template>
-              <div class="status-hover text-center">
-                <span v-if="equip.stats.ap">
-                  AP: {{ equip.stats.ap }}<br />
-                </span>
-                <span v-if="equip.stats.dp">DP: {{ equip.stats.dp }}</span>
-              </div>
-            </b-popover>
           </template>
         </b-tab>
 
@@ -57,7 +44,17 @@ export default {
   },
   computed: {
     weapons: function() {
-      return this.filterEquip(["mainhand", "offhand"]);
+      var weapons = this.filterEquip(["mainhand", "offhand"]);
+
+      weapons.map(eq => {
+        const klass = this.$root.BDMP.class;
+        const kind = eq.type == "mainhand" ? klass.mainhand : klass.offhand;
+
+        eq.kind = kind;
+        return eq;
+      });
+
+      return weapons;
     },
     armors: function() {
       return this.filterEquip(["armor", "helmet", "gloves", "shoes"]);

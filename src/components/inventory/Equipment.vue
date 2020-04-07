@@ -1,6 +1,14 @@
 <template>
   <div class="equipment" :class="type" :id="`eq${equip.id}`">
     <img class="mw-100 mh-100" :src="getImage" />
+
+    <b-popover :target="`eq${equip.id}`" triggers="hover" placement="top" v-if="tooltip">
+      <template v-slot:title>{{ equip.fullName }}</template>
+      <div class="status-hover text-center">
+        <span v-if="equip.stats.ap"> AP: {{ equip.stats.ap }}<br /> </span>
+        <span v-if="equip.stats.dp">DP: {{ equip.stats.dp }}</span>
+      </div>
+    </b-popover>
   </div>
 </template>
 
@@ -9,11 +17,13 @@ export default {
   name: "Equipment",
   props: {
     type: String,
-    equip: Object
+    equip: Object,
+    tooltip: Boolean
   },
   computed: {
     getImage: function() {
-      return require(`@/assets/equipments/${this.equip.id}.png`);
+      const basePath = process.env.BASE_URL;
+      return `${basePath}equipments/${this.equip.imageUri}`;
     }
   }
 };
@@ -22,9 +32,7 @@ export default {
 <style scoped>
 .equipment {
   display: inline-block;
-  width: 64px;
   height: 64px;
-  background: #ddd;
   background-position: center;
   cursor: pointer;
 }
@@ -35,5 +43,13 @@ export default {
 
 .status-hover span {
   margin: 0 1rem;
+}
+
+.slot img {
+  cursor: pointer;
+  border-radius: 50%;
+}
+.slot.equipment {
+  background: none;
 }
 </style>
