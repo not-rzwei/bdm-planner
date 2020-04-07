@@ -54,7 +54,7 @@ export default {
         return eq;
       });
 
-      return weapons;
+      return weapons
     },
     armors: function() {
       return this.filterEquip(["armor", "helmet", "gloves", "shoes"]);
@@ -64,6 +64,21 @@ export default {
     filterEquip: function(filters) {
       return this.$root.BDMP.equipmentList.filter(function(eq) {
         return filters.includes(eq.type);
+      }).sort((a, b) => {
+        const gradePoint = {
+          white: 0,
+          green: 1,
+          blue: 2,
+          purple: 3,
+          yellow: 4,
+          orange: 5,
+          red: 6
+        };
+
+        const gradeA = gradePoint[a.grade]
+        const gradeB = gradePoint[b.grade]
+
+        return gradeB - gradeA
       });
     },
     selectItem: function(equip) {
