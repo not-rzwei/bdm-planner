@@ -80,20 +80,4 @@ export default {
 .slot.shoes {
   background-image: url(~@/assets/placeholders/shoes.png);
 }
-
-.slot.ring {
-  background-image: url(~@/assets/placeholders/ring.png);
-}
-
-.slot.necklace {
-  background-image: url(~@/assets/placeholders/necklace.png);
-}
-
-.slot.earring {
-  background-image: url(~@/assets/placeholders/earring.png);
-}
-
-.slot.belt {
-  background-image: url(~@/assets/placeholders/belt.png);
-}
 </style>
