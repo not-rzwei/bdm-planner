@@ -1,5 +1,5 @@
 <template>
-  <div class="slot" :class="[type, {'bound': isBound}]">
+  <div class="slot" :class="[type, { bound: isBound }]">
     <template v-if="equip != undefined && equip.id != 0">
       <template v-if="equip.enhancement.current > 0">
         <span class="lead text-light"> +{{ equip.enhancement.current }} </span>

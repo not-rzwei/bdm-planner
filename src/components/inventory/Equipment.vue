@@ -51,7 +51,7 @@ export default {
 }
 
 .equipment img {
-  border: 3px solid #ddd;
+  border: 2px solid #ddd;
 }
 
 .equipment .red {

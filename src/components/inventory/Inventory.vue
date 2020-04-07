@@ -1,7 +1,7 @@
 <template>
   <b-col cols="5" class="inventory">
-    <b-card no-body>
-      <b-tabs pills card>
+    <b-card no-body class="bg-dark text-light">
+      <b-tabs pills content-class="p-3 content">
         <b-tab
           :title="type[0].toUpperCase() + type.slice(1)"
           v-for="type in ['weapons', 'armors']"
@@ -54,7 +54,7 @@ export default {
         return eq;
       });
 
-      return weapons
+      return weapons;
     },
     armors: function() {
       return this.filterEquip(["armor", "helmet", "gloves", "shoes"]);
@@ -62,24 +62,26 @@ export default {
   },
   methods: {
     filterEquip: function(filters) {
-      return this.$root.BDMP.equipmentList.filter(function(eq) {
-        return filters.includes(eq.type);
-      }).sort((a, b) => {
-        const gradePoint = {
-          white: 0,
-          green: 1,
-          blue: 2,
-          purple: 3,
-          yellow: 4,
-          orange: 5,
-          red: 6
-        };
+      return this.$root.BDMP.equipmentList
+        .filter(function(eq) {
+          return filters.includes(eq.type);
+        })
+        .sort((a, b) => {
+          const gradePoint = {
+            white: 0,
+            green: 1,
+            blue: 2,
+            purple: 3,
+            yellow: 4,
+            orange: 5,
+            red: 6
+          };
 
-        const gradeA = gradePoint[a.grade]
-        const gradeB = gradePoint[b.grade]
+          const gradeA = gradePoint[a.grade];
+          const gradeB = gradePoint[b.grade];
 
-        return gradeB - gradeA
-      });
+          return gradeB - gradeA;
+        });
     },
     selectItem: function(equip) {
       this.selected = equip;
@@ -101,5 +103,24 @@ export default {
 
 .tabs a {
   text-transform: capitalize;
+}
+
+.inventory >>> .content {
+  /* max-height: 500px; */
+  height: 500px;
+  overflow-y: auto;
+}
+
+.inventory >>> .nav-pills {
+  padding: 1rem;
+  padding-bottom: 0;
+}
+
+.inventory >>> .nav-link.active {
+  background-color: #28a745;
+}
+
+.inventory >>> .nav-item a {
+  color: #f8f9fa;
 }
 </style>
