@@ -10,6 +10,9 @@
           <b-nav-item href="https://github.com/rif2d/bdm-planner">
             GitHub
           </b-nav-item>
+          <b-nav-item href="https://github.com/rif2d/bdm-planner/issues">
+            Issue
+          </b-nav-item>
         </b-navbar-nav>
       </b-container>
     </b-navbar>
