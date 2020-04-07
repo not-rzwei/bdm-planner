@@ -51,11 +51,15 @@ export default {
 }
 
 .equipment img {
-  border: 2px solid #ddd;
+  border: 3px solid #ddd;
 }
 
 .equipment .red {
   border-color: #dc3545;
+}
+
+.equipment .orange {
+  border-color: #fd7e14;
 }
 
 .slot img {
