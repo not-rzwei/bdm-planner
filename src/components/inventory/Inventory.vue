@@ -77,10 +77,10 @@ export default {
             red: 6
           };
 
-          const gradeA = gradePoint[a.grade];
-          const gradeB = gradePoint[b.grade];
+          const gradeA = gradePoint[a.grade],
+            gradeB = gradePoint[b.grade];
 
-          return gradeB - gradeA;
+          return gradeB - gradeA || a.id - b.id;
         });
     },
     selectItem: function(equip) {
