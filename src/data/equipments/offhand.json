@@ -8,5 +8,75 @@
       "ap": 84,
       "dp": 38
     }
+  },
+  {
+    "id": 202,
+    "name": "Ultimate Rosar",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 59,
+      "dp": 19
+    }
+  },
+  {
+    "id": 203,
+    "name": "Ultimate Shamir",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 50,
+      "dp": 16
+    }
+  },
+  {
+    "id": 204,
+    "name": "Ultimate Mohrig",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 50,
+      "dp": 16
+    }
+  },
+  {
+    "id": 205,
+    "name": "Ultimate Kalas",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 50,
+      "dp": 16
+    }
+  },
+  {
+    "id": 206,
+    "name": "Ultimate Parrying",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 53,
+      "dp": 17
+    }
+  },
+  {
+    "id": 207,
+    "name": "Ultimate Bronze",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 53,
+      "dp": 17
+    }
+  },
+  {
+    "id": 208,
+    "name": "Ultimate Steel",
+    "type": "offhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 53,
+      "dp": 17
+    }
   }
 ]

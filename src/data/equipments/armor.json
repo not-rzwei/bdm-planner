@@ -8,5 +8,85 @@
       "ap": 0,
       "dp": 111
     }
+  },
+  {
+    "id": 402,
+    "name": "Shultz",
+    "type": "armor",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 111
+    }
+  },
+  {
+    "id": 403,
+    "name": "Ultimate Grunil",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 71
+    }
+  },
+  {
+    "id": 404,
+    "name": "Ultimate Taritas",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 63
+    }
+  },
+  {
+    "id": 405,
+    "name": "Ultimate Azerian",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 61
+    }
+  },
+  {
+    "id": 406,
+    "name": "Ultimate Zereth",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 59
+    }
+  },
+  {
+    "id": 407,
+    "name": "Ultimate Shamir",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 58
+    }
+  },
+  {
+    "id": 408,
+    "name": "Ultimate Mohrig",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 56
+    }
+  },
+  {
+    "id": 409,
+    "name": "Ultimate Kalas",
+    "type": "armor",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 54
+    }
   }
 ]

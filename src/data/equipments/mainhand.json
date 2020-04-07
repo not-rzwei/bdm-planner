@@ -8,5 +8,105 @@
       "ap": 135,
       "dp": 0
     }
+  },
+  {
+    "id": 102,
+    "name": "Dandelion",
+    "type": "mainhand",
+    "grade": "red",
+    "stats": {
+      "ap": 135,
+      "dp": 0
+    }
+  },
+  {
+    "id": 103,
+    "name": "Ultimate Liverto",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 95,
+      "dp": 0
+    }
+  },
+  {
+    "id": 104,
+    "name": "Ultimate Bares",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 86,
+      "dp": 0
+    }
+  },
+  {
+    "id": 105,
+    "name": "Ultimate Azwell",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 83,
+      "dp": 0
+    }
+  },
+  {
+    "id": 106,
+    "name": "Ultimate Yuria",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 80,
+      "dp": 0
+    }
+  },
+  {
+    "id": 107,
+    "name": "Ultimate Shamir",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 84,
+      "dp": 0
+    }
+  },
+  {
+    "id": 108,
+    "name": "Ultimate Mohrig",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 80,
+      "dp": 0
+    }
+  },
+  {
+    "id": 109,
+    "name": "Ultimate Kalas",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 76,
+      "dp": 0
+    }
+  },
+  {
+    "id": 110,
+    "name": "Ultimate Romain",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 76,
+      "dp": 0
+    }
+  },
+  {
+    "id": 111,
+    "name": "Ultimate Seleth",
+    "type": "mainhand",
+    "grade": "orange",
+    "stats": {
+      "ap": 80,
+      "dp": 0
+    }
   }
 ]

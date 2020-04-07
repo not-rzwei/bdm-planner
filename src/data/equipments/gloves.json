@@ -8,5 +8,85 @@
       "ap": 0,
       "dp": 78
     }
+  },
+  {
+    "id": 502,
+    "name": "Noir's",
+    "type": "gloves",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 78
+    }
+  },
+  {
+    "id": 503,
+    "name": "Ultimate Grunil",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 38
+    }
+  },
+  {
+    "id": 504,
+    "name": "Ultimate Taritas",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 38
+    }
+  },
+  {
+    "id": 505,
+    "name": "Ultimate Azerian",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 34
+    }
+  },
+  {
+    "id": 506,
+    "name": "Ultimate Zereth",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 30
+    }
+  },
+  {
+    "id": 507,
+    "name": "Ultimate Shamir",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 32
+    }
+  },
+  {
+    "id": 508,
+    "name": "Ultimate Mohrig",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 30
+    }
+  },
+  {
+    "id": 509,
+    "name": "Ultimate Kalas",
+    "type": "gloves",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 30
+    }
   }
 ]

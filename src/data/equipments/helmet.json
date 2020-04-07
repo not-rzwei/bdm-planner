@@ -8,5 +8,95 @@
       "ap": 0,
       "dp": 95
     }
+  },
+  {
+    "id": 302,
+    "name": "Shultz",
+    "type": "helmet",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 95
+    }
+  },
+  {
+    "id": 303,
+    "name": "Guy Seric",
+    "type": "helmet",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 95
+    }
+  },
+  {
+    "id": 304,
+    "name": "Ultimate Grunil",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 55
+    }
+  },
+  {
+    "id": 305,
+    "name": "Ultimate Taritas",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 48
+    }
+  },
+  {
+    "id": 306,
+    "name": "Ultimate Azerian",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 46
+    }
+  },
+  {
+    "id": 307,
+    "name": "Ultimate Zereth",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 44
+    }
+  },
+  {
+    "id": 308,
+    "name": "Ultimate Shamir",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 45
+    }
+  },
+  {
+    "id": 309,
+    "name": "Ultimate Mohrig",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 43
+    }
+  },
+  {
+    "id": 310,
+    "name": "Ultimate Kalas",
+    "type": "helmet",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 41
+    }
   }
 ]

@@ -8,5 +8,95 @@
       "ap": 0,
       "dp": 78
     }
+  },
+  {
+    "id": 602,
+    "name": "Noir's",
+    "type": "shoes",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 95
+    }
+  },
+  {
+    "id": 603,
+    "name": "Guy Seric",
+    "type": "shoes",
+    "grade": "red",
+    "stats": {
+      "ap": 0,
+      "dp": 95
+    }
+  },
+  {
+    "id": 604,
+    "name": "Ultimate Grunil",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 38
+    }
+  },
+  {
+    "id": 605,
+    "name": "Ultimate Taritas",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 34
+    }
+  },
+  {
+    "id": 606,
+    "name": "Ultimate Azerian",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 32
+    }
+  },
+  {
+    "id": 607,
+    "name": "Ultimate Zereth",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 30
+    }
+  },
+  {
+    "id": 608,
+    "name": "Ultimate Shamir",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 32
+    }
+  },
+  {
+    "id": 609,
+    "name": "Ultimate Mohrig",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 30
+    }
+  },
+  {
+    "id": 310,
+    "name": "Ultimate Kalas",
+    "type": "shoes",
+    "grade": "orange",
+    "stats": {
+      "ap": 0,
+      "dp": 28
+    }
   }
 ]
