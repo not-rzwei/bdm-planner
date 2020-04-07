@@ -13,14 +13,14 @@ const BDMP = class {
     helmet: new Equipment(),
     armor: new Equipment(),
     gloves: new Equipment(),
-    shoes: new Equipment(),
+    shoes: new Equipment()
   };
 
   useEquip(id) {
     var equip = this.findEquip(id);
 
     if (!equip.id) return false;
-    
+
     var prevEquip = this.equipment[equip.type];
     this.removeEquip(prevEquip);
 
@@ -46,18 +46,18 @@ const BDMP = class {
 
   removeFromList(id) {
     var list = this.equipmentList;
-    var removedList = list.filter((eq) => eq.id != id);
+    var removedList = list.filter(eq => eq.id != id);
 
     this.equipmentList = removedList;
   }
 
   findEquip(id) {
-    return this.equipmentList.find((eq) => eq.id == id);
+    return this.equipmentList.find(eq => eq.id == id);
   }
 
   get stats() {
     return {
-      cp: this.equipmentsCP(),
+      cp: this.equipmentsCP()
     };
   }
 
@@ -75,7 +75,7 @@ const BDMP = class {
     return {
       total: cp.ap + cp.dp,
       ap: cp.ap,
-      dp: cp.dp,
+      dp: cp.dp
     };
   }
 };
