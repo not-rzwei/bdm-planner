@@ -14,6 +14,7 @@
         :equip="equipment[type]"
         :type="type"
         :key="type"
+        :isBound="equipment[type].bound"
         @click.native="selectSlot(type)"
       />
     </template>

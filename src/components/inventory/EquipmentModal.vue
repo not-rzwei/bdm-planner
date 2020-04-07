@@ -4,7 +4,9 @@
       <div class="d-block text-center">
         <div class="container">
           <b-row>
-            <img :src="getImage" />
+            <b-col>
+              <Equipment :equip="equip" />
+            </b-col>
           </b-row>
           <b-row class="m-2">
             <b-col>
@@ -51,14 +53,15 @@
 </template>
 
 <script>
+import Equipment from "@/components/inventory/Equipment.vue";
+
 export default {
   name: "EquipmentModal",
+  components: {
+    Equipment
+  },
   props: ["id", "equip", "ok"],
   computed: {
-    getImage: function() {
-      const basePath = process.env.BASE_URL;
-      return `${basePath}equipments/${this.equip.imageUri}`;
-    },
     enhanceLevel: {
       get: function() {
         return this.equip.enhancement.current;

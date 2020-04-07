@@ -1,5 +1,5 @@
 <template>
-  <div class="slot" :class="[type, gradeClass]">
+  <div class="slot" :class="[type, {'bound': isBound}]">
     <template v-if="equip != undefined && equip.id != 0">
       <template v-if="equip.enhancement.current > 0">
         <span class="lead text-light"> +{{ equip.enhancement.current }} </span>
@@ -20,12 +20,10 @@ export default {
   },
   props: {
     type: String,
-    equip: Object
+    equip: Object,
+    isBound: Boolean
   },
   computed: {
-    getImage: function() {
-      return require(`@/assets/equipments/${this.equip.id}.png`);
-    },
     gradeClass: function() {
       let equip = this.equip;
       return equip != undefined && equip.id != 0 ? equip.grade : "";
@@ -47,16 +45,16 @@ export default {
   vertical-align: middle;
 }
 
+.slot.bound {
+  border-color: transparent;
+}
+
 .slot span {
   position: absolute;
   top: -4px;
   left: -8px;
   text-shadow: 0.75px 0 0 black, -0.75px 0 0 black, 0 0.75px 0 black,
     0 -0.75px 0 black;
-}
-
-.slot.red {
-  border-color: #dc3545;
 }
 
 .slot.mainhand {

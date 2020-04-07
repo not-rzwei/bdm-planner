@@ -1,8 +1,13 @@
 <template>
-  <div class="equipment" :class="type" :id="`eq${equip.id}`">
-    <img class="mw-100 mh-100" :src="getImage" />
+  <div class="equipment" :id="`eq${equip.id}`">
+    <img class="mw-100 mh-100" :class="equip.grade" :src="getImage" />
 
-    <b-popover :target="`eq${equip.id}`" triggers="hover" placement="top" v-if="tooltip">
+    <b-popover
+      :target="`eq${equip.id}`"
+      triggers="hover"
+      placement="top"
+      v-if="tooltip"
+    >
       <template v-slot:title>{{ equip.fullName }}</template>
       <div class="status-hover text-center">
         <span v-if="equip.stats.ap"> AP: {{ equip.stats.ap }}<br /> </span>
@@ -45,11 +50,16 @@ export default {
   margin: 0 1rem;
 }
 
+.equipment img {
+  border: 2px solid #ddd;
+}
+
+.equipment .red {
+  border-color: #dc3545;
+}
+
 .slot img {
   cursor: pointer;
   border-radius: 50%;
-}
-.slot.equipment {
-  background: none;
 }
 </style>
