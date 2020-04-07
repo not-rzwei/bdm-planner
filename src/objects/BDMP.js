@@ -1,15 +1,16 @@
 import EquipmentList from "./EquipmentList";
 import Equipment from "./Equipment";
+import Weapon from "./Weapon";
 
 const BDMP = class {
   equipmentList = EquipmentList;
   equipment = {
-    mainhand: new Equipment({ type: "mainhand" }),
-    offhand: new Equipment({ type: "helmet" }),
-    helmet: new Equipment({ type: "helmet" }),
-    armor: new Equipment({ type: "armor" }),
-    gloves: new Equipment({ type: "gloves" }),
-    shoes: new Equipment({ type: "shoes" })
+    mainhand: new Weapon(),
+    offhand: new Weapon(),
+    helmet: new Equipment(),
+    armor: new Equipment(),
+    gloves: new Equipment(),
+    shoes: new Equipment()
   };
 
   useEquip(id) {

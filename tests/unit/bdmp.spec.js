@@ -7,15 +7,6 @@ describe("BDMP.js", () => {
       expect(new BDMP().equipmentList).to.be.an("array");
     });
 
-    it("return a mainhand", () => {
-      var mainhand = new BDMP().equipment.mainhand;
-      expect(mainhand)
-        .to.be.an("object")
-        .include({
-          type: "mainhand"
-        });
-    });
-
     it("return noir glove", () => {
       var bdmp = new BDMP();
       var noir = bdmp.equipmentList.find(eq => eq.id == 501);
