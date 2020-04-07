@@ -1,8 +1,11 @@
 import EquipmentList from "./EquipmentList";
 import Equipment from "./Equipment";
 import Weapon from "./Weapon";
+import Class from "./Class";
 
 const BDMP = class {
+  class = new Class("Ranger");
+
   equipmentList = EquipmentList;
   equipment = {
     mainhand: new Weapon(),

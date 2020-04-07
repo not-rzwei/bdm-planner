@@ -37,6 +37,17 @@ class Equipment {
       this.type.slice(1)}`;
   }
 
+  get imageUri() {
+    return `${this.type}/${this.slug}.png`;
+  }
+
+  get slug() {
+    return this.name
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^\w-]+/g, "");
+  }
+
   get totalCP() {
     return this.stats.ap + this.stats.dp;
   }
