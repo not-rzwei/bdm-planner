@@ -55,6 +55,7 @@ export default {
   },
   methods: {
     selectSlot: function(type) {
+      if (!this.equipment[type].bound) return false;
       this.selected = this.equipment[type];
       this.$bvModal.show(this.modal_id);
     },
